@@ -80,10 +80,11 @@ try:
     found_emotions = []
     for word in final_words:
         if word in emotion_list:
-            # print(word)
             found_emotions.append(emotion_list[word])
 
     total_emotions = countemotions(found_emotions)
+
+    print(f"Overall tone: {next(iter(total_emotions))}")
 
     createplot(total_emotions, 'graph')
 
